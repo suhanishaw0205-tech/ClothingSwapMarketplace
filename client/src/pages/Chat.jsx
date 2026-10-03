@@ -33,7 +33,7 @@ function Chat() {
       setLoading(true);
 
       const incomingResponse = await fetch(
-        "http://localhost:5000/api/swaps/incoming",
+        "https://clothing-swap-backend-efmk.onrender.com/api/swaps/incoming",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -42,7 +42,7 @@ function Chat() {
       );
 
       const sentResponse = await fetch(
-        "http://localhost:5000/api/swaps/sent",
+        "https://clothing-swap-backend-efmk.onrender.com/api/swaps/sent",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -94,7 +94,7 @@ function Chat() {
       setChatUser(otherUser);
 
       const messagesResponse = await fetch(
-        `http://localhost:5000/api/messages/${otherUser._id}`,
+        `https://clothing-swap-backend-efmk.onrender.com/api/messages/${otherUser._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -145,7 +145,7 @@ function Chat() {
       setSending(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/messages",
+        "https://clothing-swap-backend-efmk.onrender.com/api/messages",
         {
           method: "POST",
           headers: {

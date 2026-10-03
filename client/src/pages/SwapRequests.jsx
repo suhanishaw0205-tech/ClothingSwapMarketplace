@@ -21,13 +21,13 @@ function SwapRequests() {
       setLoading(true);
 
       const [sentResponse, incomingResponse] = await Promise.all([
-        fetch("http://localhost:5000/api/swaps/sent", {
+        fetch("https://clothing-swap-backend-efmk.onrender.com/api/swaps/sent", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }),
 
-        fetch("http://localhost:5000/api/swaps/incoming", {
+        fetch("https://clothing-swap-backend-efmk.onrender.com/api/swaps/incoming", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ function SwapRequests() {
       setActionLoading(requestId);
 
       const response = await fetch(
-        `http://localhost:5000/api/swaps/${requestId}/status`,
+        `https://clothing-swap-backend-efmk.onrender.com/api/swaps/${requestId}/status`,
         {
           method: "PUT",
           headers: {

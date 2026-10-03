@@ -21,7 +21,7 @@ function ItemDetails() {
         setError("");
 
         const response = await fetch(
-          "http://localhost:5000/api/clothing"
+          "https://clothing-swap-backend-efmk.onrender.com/api/clothing"
         );
 
         const data = await response.json();
@@ -88,7 +88,7 @@ function ItemDetails() {
       setRequestLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/swaps",
+        "https://clothing-swap-backend-efmk.onrender.com/api/swaps",
         {
           method: "POST",
           headers: {

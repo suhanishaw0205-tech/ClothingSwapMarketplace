@@ -20,7 +20,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://clothing-swap-backend-efmk.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

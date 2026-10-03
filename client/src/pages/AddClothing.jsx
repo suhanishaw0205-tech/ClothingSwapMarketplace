@@ -43,7 +43,7 @@ function AddClothing() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/clothing",
+        "https://clothing-swap-backend-efmk.onrender.com/api/clothing",
         {
           method: "POST",
           headers: {

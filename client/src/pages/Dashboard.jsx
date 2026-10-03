@@ -35,15 +35,15 @@ function Dashboard() {
           sentResponse,
           incomingResponse,
         ] = await Promise.all([
-          fetch("http://localhost:5000/api/clothing"),
+          fetch("https://clothing-swap-backend-efmk.onrender.com/api/clothing"),
 
-          fetch("http://localhost:5000/api/swaps/sent", {
+          fetch("https://clothing-swap-backend-efmk.onrender.com/api/swaps/sent", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }),
 
-          fetch("http://localhost:5000/api/swaps/incoming", {
+          fetch("https://clothing-swap-backend-efmk.onrender.com/api/swaps/incoming", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
